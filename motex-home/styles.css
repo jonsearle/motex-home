@@ -1,0 +1,314 @@
+/* MOTEX Landing Page Styles */
+/* Component styles using design theme variables */
+
+/* ============================================
+   CONTAINER & LAYOUT
+   ============================================ */
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-md);
+  }
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  padding: var(--padding-hero-vertical) 0;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.hero-logo {
+  width: fit-content;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-logo .logo-img {
+  max-height: 136px;
+  width: auto;
+}
+
+.logo-img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 800px;
+}
+
+.hero-heading {
+  font-size: var(--font-hero-heading-size);
+  font-weight: var(--font-hero-heading-weight);
+  line-height: var(--font-hero-heading-line-height);
+  color: var(--color-text-primary);
+}
+
+.hero-subheading {
+  font-size: var(--font-hero-subheading-size);
+  font-weight: var(--font-hero-subheading-weight);
+  line-height: var(--font-hero-subheading-line-height);
+  color: var(--color-text-primary);
+}
+
+.hero-pricing {
+  font-size: var(--font-body-size);
+  color: var(--color-text-primary);
+  margin-top: var(--space-sm);
+}
+
+/* ============================================
+   BUTTONS (CTA)
+   ============================================ */
+
+.btn-cta {
+  display: inline-block;
+  padding: var(--button-padding);
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  font-size: var(--font-button-size);
+  font-weight: var(--font-button-weight);
+  text-decoration: none;
+  border-radius: var(--button-border-radius);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-height: 44px; /* Touch-friendly minimum */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+.btn-cta:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.btn-cta:active {
+  background-color: var(--color-accent-active);
+}
+
+.btn-cta:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   WHAT YOU GET SECTION
+   ============================================ */
+
+.section-what-you-get {
+  background-color: var(--color-text-primary);
+  padding: var(--section-spacing) 0;
+}
+
+.section-what-you-get .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.section-heading {
+  font-size: var(--font-section-heading-size);
+  font-weight: var(--font-section-heading-weight);
+  line-height: var(--font-section-heading-line-height);
+  color: var(--color-text-dark);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--feature-card-spacing);
+  margin-top: var(--space-md);
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.feature-title {
+  font-size: var(--font-feature-title-size);
+  font-weight: var(--font-feature-title-weight);
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-sm);
+}
+
+.feature-description {
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  line-height: var(--font-body-line-height);
+  color: var(--color-text-dark);
+}
+
+/* ============================================
+   PRICING SECTION
+   ============================================ */
+
+.section-pricing {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  padding: var(--section-spacing) 0;
+}
+
+.section-pricing .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.section-pricing .section-heading {
+  color: var(--color-text-primary);
+}
+
+.pricing-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+
+.pricing-list li {
+  font-size: var(--font-body-size);
+  color: var(--color-text-primary);
+  padding-left: var(--space-lg);
+  position: relative;
+}
+
+.pricing-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-text-primary);
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  padding: var(--space-md) 0;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: nowrap;
+}
+
+.footer-logo {
+  width: fit-content;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-logo .logo-img {
+  max-height: 48px;
+  width: auto;
+}
+
+.footer-tagline {
+  font-size: 12px;
+  font-weight: var(--font-footer-weight);
+  color: var(--color-text-dark);
+  white-space: nowrap;
+}
+
+.footer-bottom-strip {
+  background-color: var(--color-bg-light);
+  height: 4px;
+  width: 100%;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-content {
+    gap: var(--space-md);
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .feature-card {
+    gap: var(--space-sm);
+  }
+  
+  .footer .container {
+    gap: var(--space-sm);
+  }
+  
+  .footer-logo .logo-img {
+    max-height: 40px;
+  }
+  
+  .footer-tagline {
+    font-size: 11px;
+  }
+  
+  .btn-cta {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero {
+    padding: var(--padding-hero-vertical) 0;
+  }
+  
+  .section-what-you-get,
+  .section-pricing {
+    padding: var(--section-spacing) 0;
+  }
+  
+  .features-grid {
+    gap: var(--space-md);
+  }
+  
+  .pricing-list {
+    gap: var(--space-sm);
+  }
+}
+

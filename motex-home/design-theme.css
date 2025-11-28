@@ -1,0 +1,130 @@
+/* MOTEX Design Theme System */
+/* CSS Custom Properties for Design Tokens */
+
+:root {
+  /* ============================================
+     COLOUR PALETTE
+     ============================================ */
+  
+  /* Primary Brand Colours */
+  --color-bg-primary: #111827; /* Charcoal / Navy Background */
+  --color-text-primary: #FFFFFF; /* White text on dark backgrounds */
+  
+  /* Accent Colour */
+  --color-accent: #F97316; /* Orange CTA Button (Tailwind orange-500) */
+  --color-accent-hover: #EA580C; /* Orange hover state (orange-600) */
+  --color-accent-active: #C2410C; /* Orange pressed state (orange-700) */
+  
+  /* Supporting Greys */
+  --color-bg-light: #F3F4F6; /* Light Grey Background */
+  --color-text-mid: #4B5563; /* Mid Grey Text */
+  --color-text-dark: #1F2937; /* Dark Grey Text */
+  
+  /* ============================================
+     TYPOGRAPHY SYSTEM
+     ============================================ */
+  
+  /* Font Family */
+  --font-sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Hero Typography */
+  --font-hero-heading-size: 36px;
+  --font-hero-heading-weight: 800;
+  --font-hero-heading-line-height: 1.2;
+  
+  --font-hero-subheading-size: 18px;
+  --font-hero-subheading-weight: 400;
+  --font-hero-subheading-line-height: 1.5;
+  
+  /* CTA Button Typography */
+  --font-button-size: 16px;
+  --font-button-weight: 600;
+  
+  /* Section Headings */
+  --font-section-heading-size: 24px;
+  --font-section-heading-weight: 700;
+  --font-section-heading-line-height: 1.3;
+  
+  /* Feature Titles */
+  --font-feature-title-size: 16px;
+  --font-feature-title-weight: 700;
+  
+  /* Body Text */
+  --font-body-size: 16px;
+  --font-body-weight: 400;
+  --font-body-line-height: 1.6;
+  
+  /* Footer Text */
+  --font-footer-size: 14px;
+  --font-footer-weight: 400;
+  --font-footer-opacity: 0.9;
+  
+  /* ============================================
+     SPACING + LAYOUT
+     ============================================ */
+  
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+  
+  --padding-hero-vertical: 64px;
+  --container-max-width: 1200px;
+  --section-spacing: 48px;
+  --feature-card-spacing: 24px;
+  
+  /* ============================================
+     COMPONENT TOKENS
+     ============================================ */
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  
+  --button-padding: 12px 20px;
+  --button-border-radius: 4px;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-body-size);
+  font-weight: var(--font-body-weight);
+  line-height: var(--font-body-line-height);
+  color: var(--color-text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  :root {
+    --font-hero-heading-size: 28px;
+    --font-hero-subheading-size: 16px;
+    --font-section-heading-size: 20px;
+    --padding-hero-vertical: 48px;
+    --section-spacing: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-hero-heading-size: 24px;
+    --font-hero-subheading-size: 15px;
+    --font-section-heading-size: 18px;
+    --padding-hero-vertical: 32px;
+    --section-spacing: 24px;
+  }
+}
+
