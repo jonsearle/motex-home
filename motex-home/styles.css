@@ -40,7 +40,7 @@
 }
 
 .hero-logo .logo-img {
-  max-height: 86.7px;
+  max-height: 100px;
   width: auto;
 }
 
@@ -230,7 +230,7 @@
 }
 
 .footer-logo .logo-img {
-  max-height: 48px;
+  max-height: 15px; /* Reduced to ~20% of previous height for a much smaller footer logo */
   width: auto;
 }
 
@@ -279,7 +279,7 @@
   }
   
   .footer-logo .logo-img {
-    max-height: 40px;
+    max-height: 8px; /* Keep mobile footer logo in proportion (~20% of previous height) */
   }
   
   .footer-tagline {
