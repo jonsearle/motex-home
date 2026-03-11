@@ -232,6 +232,7 @@
 .footer-logo .logo-img {
   max-height: 15px; /* Reduced to ~20% of previous height for a much smaller footer logo */
   width: auto;
+  filter: brightness(0) saturate(100%);
 }
 
 .footer-tagline {
@@ -311,4 +312,3 @@
     gap: var(--space-sm);
   }
 }
-
