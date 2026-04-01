@@ -24,13 +24,28 @@
 .hero {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
-  padding: var(--padding-hero-vertical) 0;
+  overflow: hidden;
 }
 
 .hero .container {
   display: flex;
   flex-direction: column;
+  gap: 0;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr);
+  align-items: stretch;
+  gap: calc(var(--space-lg) + var(--space-md));
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
   gap: var(--space-lg);
+  justify-content: center;
+  padding: var(--padding-hero-vertical) var(--space-md) var(--padding-hero-vertical) 0;
 }
 
 .hero-logo {
@@ -54,7 +69,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  max-width: 800px;
+  max-width: 520px;
 }
 
 .hero-heading {
@@ -75,6 +90,24 @@
   font-size: var(--font-body-size);
   color: var(--color-text-primary);
   margin-top: var(--space-sm);
+}
+
+.hero-image-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  margin-right: 0;
+  background-color: transparent;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
 }
 
 /* ============================================
@@ -138,7 +171,7 @@
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--feature-card-spacing);
+  gap: calc(var(--feature-card-spacing) + var(--space-md));
   margin-top: var(--space-md);
 }
 
@@ -146,6 +179,28 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+  border-radius: 14px;
+  background-color: rgba(31, 41, 55, 0.08);
+  color: var(--color-text-dark);
+}
+
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .feature-title {
@@ -254,6 +309,21 @@
 
 /* Tablet and below */
 @media (max-width: 1024px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .hero-copy {
+    padding: var(--padding-hero-vertical) 0 0;
+  }
+
+  .hero-image-panel {
+    min-height: 420px;
+    height: 420px;
+    margin-right: 0;
+  }
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
